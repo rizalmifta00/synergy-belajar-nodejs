@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta name="theme-color" content="#db4938" />
+    <link rel="apple-touch-icon" href="asset/icon-72x72.png" />
+    <link rel="apple-touch-icon" href="asset/icon-128x128.png" />
+    <link rel="apple-touch-icon" href="asset/icon-512x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+    <meta name="msapplication-TileImage" content="asset/icon-72x72.png" />
+    <meta name="msapplication-TileImage" content="asset/icon-128x128.png" />
+    <meta name="msapplication-TileImage" content="asset/icon-512x512.png" />
+    <link rel="shortcut icon" href="/asset/menu.png" type="image/x-icon">
+
+    <script src="if-else-challange.js"></script>
+    <script src="function.js"></script>
+    
+</head>
+
+<body>
+
+    <!--  Header -->
+    <header>
+        <a href="#" class="logo">LOGO</a>
+        <div class="menuToggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#last-article">ARTICLES</a></li>
+            <li><a class="subscribe" href="#section-4">SUBSCRIBE</a></li>
+        </ul>
+
+    </header>
+    <section class="banner" id="banner">
+        <div class="content-header">
+            <h2>ART OF PLANT</h2>
+            <p>ALL ABOUT ART OF NATURE</p>
+            <div class="line"></div>
+        </div>
+    </section>
+    <section id="last-article">
+        <div class="last-article">
+            <div class="title">
+                <h2 class="text-title">LATEST ARTICLE</h2>
+                <div class="line"></div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="imgbox">
+                        <img src="/asset/img-1.png">
+                    </div>
+                    <div class="card-body">
+                        <div class="line"></div>
+                        <h3 class="card-title">Title Of Article</h3>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="box">
+                    <div class="imgbox">
+                        <img src="/asset/img-2.png">
+                    </div>
+                    <div class="card-body">
+                        <div class="line"></div>
+                        <h3 class="card-title">Title Of Article</h3>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="box">
+                    <div class="imgbox">
+                        <img src="/asset/img-3.png">
+                    </div>
+                    <div class="card-body">
+                        <div class="line"></div>
+                        <h3 class="card-title">Title Of Article</h3>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about">
+            <div class="col col-main">
+                <img class="img-about" src="/asset/img-4.svg">
+            </div>
+            <div class="col col-complementary">
+                <div class="content-about">
+                    <div class="title-content-about">About</div>
+                    <div class="line"></div>
+                    <div class="text-content-about">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries,
+                            but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages,
+                            and more recently with desktop publishing software like Aldus PageMaker including versions
+                            of
+                            Lorem Ipsum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-4" class="section-4">
+        <div class="section-4-content">
+            <div class="title">
+                <h2 class="title1">Subscribe</h2>
+                <p class="title2">Sing up to our newsletters</p>
+                <input type="text" placeholder="Your email here..">
+                <button type="submit">Submit</button>
+            </div>
+
+        </div>
+
+    </section>
+    <section>
+        <footer class="footer">
+            <ul class="navigation">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">ARTICLES</a></li>
+                <li><a href="#">HOME</a></li>
+            </ul>
+        </footer>
+    </section>
+
+    <script src="js/pwa.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+
+        }
+    </script>
+
+
+</html>
