@@ -3,6 +3,7 @@ const App = Express()
 const PORT = 5000
 const Morgan = require('morgan')
 const Dotenv = require('dotenv')
+const Cors = require('cors')
 
 // Setting Nodejs Environtment
 App.set('view engine', 'ejs')
